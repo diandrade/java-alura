@@ -1,18 +1,26 @@
+import br.com.alura.screenmatch.modelos.Filme;
+import br.com.diandrade.classeex.exercises2.IdadePessoa;
+import br.com.diandrade.classeex.exercises2.MediaAluno;
+import br.com.diandrade.classeex.exercises2.Produto;
+import br.com.diandrade.classex.exercises.*;
+
 public class Principal {
     public static void main(String[] args) {
-        instanciaFilme();
+        //instanciaFilme();
         //instanciaPessoa();
         //instanciaCalculadora();
         //instanciaMusica();
         //instanciaCarro();
         //instanciaAluno();
+        //instanciaIdadePessoa();
+        //instanciaProduto();
     }
 
     static void instanciaFilme() {
         Filme meuFilme = new Filme();
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -52,5 +60,25 @@ public class Principal {
     static void instanciaAluno() {
         Aluno aluno = new Aluno();
         aluno.exibirInformacoes();
+    }
+
+    static void instanciaIdadePessoa() {
+        IdadePessoa idadepessoa = new IdadePessoa();
+        idadepessoa.verificarIdade(18);
+    }
+
+    static void instanciaProduto() {
+        Produto produto = new Produto();
+        produto.setNome("Joel");
+        produto.setPreco(10);
+        produto.aplicarDesconto(10);
+    }
+
+    static void MediaAluno() {
+        MediaAluno mediaAluno = new MediaAluno();
+        mediaAluno.setNotas(10);
+        mediaAluno.setNotas(9);
+        mediaAluno.setNotas(8);
+        mediaAluno.calcularMedia();
     }
 }
