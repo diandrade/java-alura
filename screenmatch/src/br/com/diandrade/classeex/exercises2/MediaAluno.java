@@ -6,9 +6,8 @@ Adicione um método calcularMedia que retorna a média das notas do aluno.*/
 
 public class MediaAluno {
     private String nome;
-    private double notas;
-    private int qtdNotas;
-    private int somaDasNotas;
+    private double somaDasNotas;
+    private int quantidadeNotas;
 
     public String getNome() {
         return nome;
@@ -18,20 +17,15 @@ public class MediaAluno {
         this.nome = nome;
     }
 
-    public double getNotas() {
-        return notas;
+    public void setNotas(Double nota) {
+        this.somaDasNotas += nota;
+        this.quantidadeNotas++;
     }
 
-    public void setNotas(double notas) {
-        this.notas = notas;
+    public double calcularMedia() {
+        if (quantidadeNotas == 0) {
+            return 0.0;
+        }
+        return somaDasNotas / quantidadeNotas;
     }
-
-    public int getQtdNotas() {
-        return qtdNotas;
-    }
-
-    /*public double calcularMedia(double nota) {
-
-    }*/
-
 }
