@@ -1,7 +1,7 @@
-package br.com.alura.modelos;
+package br.com.alura.screenmatch.modelos;
 
-public class Filme {
-
+public class Titulo {
+    //Atributos
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -9,22 +9,7 @@ public class Filme {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
 
-    public void exibeFichaTecnica() {
-        System.out.println("Nome do filme: " +nome);
-        System.out.println("Ano de lançamento: " +anoDeLancamento);
-        System.out.println("Duração em minutos: " +duracaoEmMinutos);
-        System.out.println("Incluído no plano: " +incluidoNoPlano);
-    }
-
-    public void avalia(double nota) {
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
-    }
-
-    public double pegaMedia() {
-        return somaDasAvaliacoes / totalDeAvaliacoes;
-    }
-
+    //Getters e Setters
     public String getNome() {
         return this.nome;
     }
@@ -61,4 +46,20 @@ public class Filme {
         return this.totalDeAvaliacoes;
     }
 
+    //Métodos
+    public double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do Título: " + nome);
+        System.out.println("Ano de Lançamento do Título: " + anoDeLancamento);
+        System.out.println("Duração em Minutos do Título: " + duracaoEmMinutos);
+        System.out.println("Incluído no plano?: " + incluidoNoPlano);
+    }
+
+    public void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
 }
