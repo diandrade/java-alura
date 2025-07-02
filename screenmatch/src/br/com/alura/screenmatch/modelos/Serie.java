@@ -39,7 +39,7 @@ public class Serie extends Titulo {
     }
 
     @Override
-    public void exibeFichaTecnica() {
-        super.exibeFichaTecnica();
+    public int getDuracaoEmMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
 }

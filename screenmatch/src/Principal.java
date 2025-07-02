@@ -21,7 +21,8 @@ public class Principal {
         lost.setAnoDeLancamento(2000);
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(50);
         lost.exibeFichaTecnica();
-        System.out.println("Duração do Filme: " + lost.getDuracaoEmMinutos());
+        System.out.println("Duração da Série: " + lost.getDuracaoEmMinutos());
     }
 }
