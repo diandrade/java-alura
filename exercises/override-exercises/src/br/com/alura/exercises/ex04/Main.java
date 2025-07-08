@@ -7,15 +7,14 @@ package br.com.alura.exercises.ex04;
 
 public class Main {
     public static void main(String[] args) {
-        /*NumerosPrimos numeroPrimos = new NumerosPrimos();
-        numeroPrimos.adicionarNumeroPrimo(4);
-        numeroPrimos.adicionarNumeroPrimo(3);
-        numeroPrimos.adicionarNumeroPrimo(2);
-        numeroPrimos.adicionarNumeroPrimo(5);
-        numeroPrimos.listarPrimos();*/
-
-        VerificadorPrimo verificadorPrimo = new VerificadorPrimo();
-        verificadorPrimo.verificarSeEhPrimo(3);
-        verificadorPrimo.verificarSeEhPrimo(4);
+        GerarProximoPrimo gerarProximoPrimo = new GerarProximoPrimo();
+        gerarProximoPrimo.adicionarNumeroPrimo(4);
+        gerarProximoPrimo.adicionarNumeroPrimo(3);
+        gerarProximoPrimo.adicionarNumeroPrimo(2);
+        gerarProximoPrimo.adicionarNumeroPrimo(5);
+        gerarProximoPrimo.listarPrimos();
+        System.out.println(gerarProximoPrimo.getPrimos());
+        gerarProximoPrimo.gerarProximoPrimo();
+        System.out.println(gerarProximoPrimo.getPrimos());
     }
 }

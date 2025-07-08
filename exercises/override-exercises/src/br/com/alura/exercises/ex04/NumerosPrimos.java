@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class NumerosPrimos {
     private final ArrayList<Integer> primos = new ArrayList<>();
 
+    public ArrayList<Integer> getPrimos() {
+        return primos;
+    }
+
     public void adicionarNumeroPrimo(int num){
         int multiplicador;
 

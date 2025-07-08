@@ -1,17 +1,21 @@
 package br.com.alura.exercises.ex04;
 
 public class VerificadorPrimo extends NumerosPrimos {
-    public void verificarSeEhPrimo(int num){
-        int multiplicador;
-
-        multiplicador = 0;
-        while (multiplicador <= num){
-            if (multiplicador * multiplicador == num){
-                System.out.println("O número inserido não é primo.");
-                return;
-            }
-            multiplicador++;
+    public boolean verificarSeEhPrimo(int num){
+        if (num <= 1) {
+            return false;
         }
-        System.out.println("O numero inserido é primo!");
+        if (num <= 3) {
+            return true;
+        }
+        if (num % 2 == 0 || num % 3 == 0) {
+            return false;
+        }
+        for (int i = 5; i * i <= num; i = i + 6) {
+            if (num % i == 0 || num % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
