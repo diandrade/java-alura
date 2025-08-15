@@ -18,22 +18,19 @@ public class Main {
     }
 
     public void readEmployees(){
-        Main main = new Main();
-
         int i;
         int length;
 
-        System.out.println("[");
+        System.out.print("[");
         i = 0;
-        length = main.employees.length;
-        System.out.println(main.employees.length);
+        length = this.employees.length;
         while (i < length){
-            System.out.println(main.employees[i]);
+            System.out.print(this.employees[i]);
             if (i == length - 1){
-                System.out.println("]");
+                System.out.print("]");
                 break;
             }
-            System.out.println(", ");
+            System.out.print(", ");
             i++;
         }
     }
@@ -46,6 +43,7 @@ public class Main {
         main.addEmployee("Vitor");
         main.addEmployee("Ana");
 
+        System.out.print("Lista de Funcionários: ");
         main.readEmployees();
     }
 }
